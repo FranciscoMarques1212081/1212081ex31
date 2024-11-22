@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+/**
+ *
+ * @author franc
+ */
+public class Ficha4 {
+
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+
+        int i, soma;
+        int[] nums;
+        double percentagem, positivos, n, media;
+        positivos = 0;
+        soma = 0;
+
+        System.out.println("Quantos números quer introduzir");
+        n = ler.nextInt();
+        nums = new int[(int) n];
+
+        for (i = 0; i < n; i = i + 1) {
+            System.out.println("Introduza o " + String.valueOf(i + 1) + "º número");
+            nums[i] = ler.nextInt();
+
+            if (nums[i] > 0) {
+                positivos = positivos + 1;
+            }
+           soma=soma+nums[i];  
+        }
+        percentagem = (positivos / n) * 100.0;
+        media=soma/n*1.0;
+        
+        System.out.println(" Dos números introduzidos," + percentagem + "% são positivos");
+        System.out.println("A soma é de:"+ soma);
+        System.out.println("A média é de:"+ media);
+    }
+}
