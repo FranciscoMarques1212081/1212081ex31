@@ -17,8 +17,12 @@ public class Ficha4 {
         System.out.println("Introduza o segundo número inteiro:");
         num2 = ler.nextInt();
 
-        subtracao = num1 - num2;
+        if (num1 > num2) {
+            subtracao = num1 - num2;
+        } else {
+            subtracao = num2 - num1;
+        }
 
-        System.out.println("A subtração dos números é: " + subtracao);
+        System.out.println("A subtração do maior número pelo menor é: " + subtracao);
     }
 }
